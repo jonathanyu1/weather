@@ -4,8 +4,50 @@
     <meta charset="utf-8" />
     <title>Weather App</title>
     <link rel='stylesheet' href='styles.css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body class='bodyContainer'>
+    <div id='header'>
+      <div id='searchContainer'>
+        <input type='text' id='searchInput' placeholder='Search a city..' name='search'>
+        <button type='submit' id='btnSearch'>
+          <span class="material-icons">search</span>
+        </button>
+      </div>
+      <div id='unitContainer'>
+        
+      </div>
+    </div>
+    <div id='currWeatherContainer'>
+      <div class='weatherLeftSide'>
+        <div class='weatherLocation'></div>
+        <div class='weatherDescription'></div>
+        <div class='weatherTemp'></div>
+        <div class='weatherIcon'></div>
+      </div>
+      <div class='weatherRightSide'>
+        <div class='weatherFeelsLikeContainer'>
+          <span class='material-icons'></span>
+          <div class='weatherLabel'>Feels Like</div>
+          <div id='feelsLikeTemp'></div>
+        </div>
+        <div class='weatherHumidityContainer'>
+          <span class='material-icons'></span>
+          <div class='weatherLabel'>Humidity</div>
+          <div id='humidityTemp'></div>
+        </div>
+        <div class='weatherWindSpeedContainer'>
+          <span class='material-icons'></span>
+          <div class='weatherLabel'>Wind Speed</div>
+          <div id='windSpeedTemp'></div>
+        </div>
+
+      </div>
+
+    </div>
+    <div id='dailyWeatherContainer'>
+
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
