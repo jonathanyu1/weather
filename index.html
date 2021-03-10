@@ -8,45 +8,88 @@
   </head>
   <body class='bodyContainer'>
     <div id='header'>
+      <div id='unitContainer'>
+        <button type='button' id='btnChangeUnit'>
+          <span id='metricLabel'>°C</span>
+          /
+          <span id='imperialLabel'>°F</span>
+        </button>
+      </div>
       <div id='searchContainer'>
         <input type='text' id='searchInput' placeholder='Search a city..' name='search'>
         <button type='submit' id='btnSearch'>
           <span class="material-icons">search</span>
         </button>
       </div>
-      <div id='unitContainer'>
-        
-      </div>
     </div>
     <div id='currWeatherContainer'>
       <div class='weatherLeftSide'>
-        <div class='weatherLocation'></div>
-        <div class='weatherDescription'></div>
-        <div class='weatherTemp'></div>
-        <div class='weatherIcon'></div>
+        <div id='weatherLocation'></div>   
+        <div id='weatherTemp'></div>
+        <div id='weatherDescription'></div>
+        <img id='weatherIcon' src='#'>
       </div>
       <div class='weatherRightSide'>
-        <div class='weatherFeelsLikeContainer'>
-          <span class='material-icons'></span>
+        <div class='weatherRightInfoContainer'>
+          <span class='material-icons'>thermostat</span>
           <div class='weatherLabel'>Feels Like</div>
           <div id='feelsLikeTemp'></div>
         </div>
-        <div class='weatherHumidityContainer'>
-          <span class='material-icons'></span>
+        <div class='weatherRightInfoContainer'>
+          <span class='material-icons'>opacity</span>
           <div class='weatherLabel'>Humidity</div>
           <div id='humidityTemp'></div>
         </div>
-        <div class='weatherWindSpeedContainer'>
-          <span class='material-icons'></span>
+        <div class='weatherRightInfoContainer'>
+          <span class='material-icons'>air</span>
           <div class='weatherLabel'>Wind Speed</div>
           <div id='windSpeedTemp'></div>
         </div>
-
       </div>
-
     </div>
     <div id='dailyWeatherContainer'>
-
+      <div class='dayContainer'>
+        <div id='day0Name'></div>
+        <div id='day0High'></div>
+        <div id='day0Low'></div>
+        <img id='day0Icon' src='#'>
+      </div>
+      <div class='dayContainer'>
+        <div id='day1Name'></div>
+        <div id='day1High'></div>
+        <div id='day1Low'></div>
+        <img id='day1Icon' src='#'>
+      </div>
+      <div class='dayContainer'>
+        <div id='day2Name'></div>
+        <div id='day2High'></div>
+        <div id='day2Low'></div>
+        <img id='day2Icon' src='#'>
+      </div>
+      <div class='dayContainer'>
+        <div id='day3Name'></div>
+        <div id='day3High'></div>
+        <div id='day3Low'></div>
+        <img id='day3Icon' src='#'>
+      </div>
+      <div class='dayContainer'>
+        <div id='day4Name'></div>
+        <div id='day4High'></div>
+        <div id='day4Low'></div>
+        <img id='day4Icon' src='#'>
+      </div>
+      <div class='dayContainer'>
+        <div id='day5Name'></div>
+        <div id='day5High'></div>
+        <div id='day5Low'></div>
+        <img id='day5Icon' src='#'>
+      </div>
+      <div class='dayContainer'>
+        <div id='day6Name'></div>
+        <div id='day6High'></div>
+        <div id='day6Low'></div>
+        <img id='day6Icon' src='#'>
+      </div>
     </div>
     <script src="main.js"></script>
   </body>
