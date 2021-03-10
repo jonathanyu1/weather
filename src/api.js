@@ -4,7 +4,7 @@ const currentWeatherAPI = async (url) => {
         const currentData = await response.json();
         console.log(currentData);
         const currentDataObj = {};
-        currentDataObj.name = currentData.name;
+        currentDataObj.city = currentData.name;
         currentDataObj.country = currentData.sys.country;
         currentDataObj.lat = currentData.coord.lat;
         currentDataObj.lon = currentData.coord.lon;
@@ -30,6 +30,8 @@ const oneCallAPI = async (url) =>{
         oneCallDataObj.windSpeed = oneCallData.current.wind_speed;
         // remember to include values for daily stuff
         oneCallDataObj.daily = oneCallData.daily;
+        // removes the first day from daily, which is today's weather
+        oneCallDataObj.daily.shift();
         return oneCallDataObj;
     }catch (error){
         console.log('error: '+error);

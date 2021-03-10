@@ -2,3 +2,46 @@ html, body{
     height: 100%;
     width: 100%;
 }
+
+.bodyContainer{
+    display: grid;
+    grid-template-rows: 15% auto 20%;
+    grid-template-areas: "header"
+                         "currWeather"
+                         "dailyWeather";
+    
+}
+
+/* header */
+
+#header{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+}
+
+#searchContainer{
+    flex-grow: 1;
+    text-align: center;
+}
+
+#metricLabel{
+    font-weight: bold;
+}
+
+/* curr weather */
+
+#currWeatherContainer{
+    grid-area: currWeather;
+}
+
+/* curr weather right side */
+.weatherRightInfoContainer{
+    display: flex;
+}
+
+
+#dailyWeatherContainer{
+    grid-area: dailyWeather;
+    display: flex;
+}
