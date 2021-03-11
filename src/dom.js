@@ -24,7 +24,7 @@ const loadWeatherData = (weatherObj, units) =>{
     // weatherDescription.innerHTML = `${weatherObj.description}`;
     weatherDescription.innerHTML = `${capitalizeStr(weatherObj.description)}`;
     weatherTemp.innerHTML = `${Math.round(weatherObj.temp)} ${degrees}`;
-    weatherIcon.src = `http://openweathermap.org/img/wn/${weatherObj.iconCode}@2x.png`;
+    weatherIcon.src = `http://openweathermap.org/img/wn/${weatherObj.iconCode}@4x.png`;
     
     // Curr Weather: right side
     const feelsLikeTemp = document.querySelector('#feelsLikeTemp');
