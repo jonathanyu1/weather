@@ -58,10 +58,10 @@ const siteController = (()=>{
         if (units=='metric'){
             units = 'imperial';
             metricLabel.style.fontWeight='normal';
-            imperialLabel.style.fontWeight='bold';
+            imperialLabel.style.fontWeight='1000';
         } else if (units=='imperial'){
             units = 'metric';
-            metricLabel.style.fontWeight='bold';
+            metricLabel.style.fontWeight='1000';
             imperialLabel.style.fontWeight='normal';
         }
         // call getData using currCity to re-display in new units

@@ -5,14 +5,16 @@ html, body{
 
 .bodyContainer{
     display: grid;
-    grid-template-rows: 6% 3% auto 30%;
+    grid-template-rows: 8% 3% auto 25%;
     grid-template-areas: "header"
                          "error"
                          "currWeather"
                          "dailyWeather";
-    /* background: url('./background/weatherBg1.jpg') no-repeat fixed center;
-    background-size: cover; */
+    background: url('./background/weatherBg.jpg') no-repeat fixed center;
+    background-size: cover;
     font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-shadow: 1.5px 1.5px black;
 }
 
 /* header */
@@ -27,7 +29,7 @@ html, body{
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    padding-right: 80px;
+    /* padding-right: 80px; */
 }
 
 #searchInput{
@@ -37,15 +39,24 @@ html, body{
     text-align: center;
     padding: 5px;
     font-size: 25px;
+    color: white;
+    text-shadow: 1.5px 1.5px black;
 }
 
 #searchInput:focus{
     outline: none;
 }
 
+#searchInput::placeholder{
+    /* color: rgba(255,255,255,0.7); */
+    color: white;
+}
+
 #btnSearch{
     border: none;
     background: none;
+    color: white;
+    text-shadow: 1px 1px black;
 }
 
 #btnSearch span{
@@ -57,7 +68,7 @@ html, body{
 }
 
 #btnSearch:hover{
-    background-color: whitesmoke;
+    cursor: pointer;
 }
 
 
@@ -65,18 +76,30 @@ html, body{
 /* unit change button */
 
 #btnChangeUnit{
-    font-size: 20px;
+    font-size: 30px;
     padding: 10px;
     margin-left: 20px;
+    border: none;
+    background: none;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+#btnChangeUnit:focus{
+    outline: none;
+}
+
+#btnChangeUnit:hover{
+    background-color: rgba(138, 178, 192, 0.3);
 }
 
 #metricLabel{
-    font-weight: bold;
-    padding-right: 10px;
+    font-weight: 1000;
+    /* padding-right: 10px; */
 }
 
 #imperialLabel{
-    padding-left: 10px;
+    /* padding-left: 10px; */
 }
 
 /* error */
@@ -85,6 +108,7 @@ html, body{
     grid-area: error;
     display: flex;
     justify-content: center;
+    padding-left: 80px;
 }
 
 #errorInput{
