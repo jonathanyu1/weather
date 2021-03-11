@@ -8,6 +8,7 @@ const siteController = (()=>{
     const searchInput = document.querySelector('#searchInput');
     const searchBtn = document.querySelector('#btnSearch');
     const btnChangeUnit = document.querySelector('#btnChangeUnit');
+    const errorInput = document.querySelector('#errorInput');
 
     const getData = async (searchValue) =>{
         try{
@@ -20,8 +21,10 @@ const siteController = (()=>{
             console.log(oneCallData);
             currCity = currentData.city;
             loadWeatherData(oneCallData, units);
+            errorInput.style.visibility='hidden';
         } catch (error){
             console.log('error: '+error);
+            errorInput.style.visibility='visible';
             // add error message under search bar
         }
         

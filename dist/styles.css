@@ -12,6 +12,7 @@ html, body{
                          "dailyWeather";
     /* background: url('./background/weatherBg1.jpg') no-repeat fixed center;
     background-size: cover; */
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* header */
@@ -88,7 +89,7 @@ html, body{
 
 #errorInput{
     font-size: 20px;
-   /* visibility: hidden; */
+    visibility: hidden;
 }
 
 
@@ -130,7 +131,7 @@ html, body{
 
 /* curr weather right side */
 .weatherRightSide{
-   /* margin-top: 10px; */
+   margin-top: 20px;
    
 }
 
@@ -161,4 +162,30 @@ html, body{
 #dailyWeatherContainer{
     grid-area: dailyWeather;
     display: flex;
+    justify-content: space-between;
+    /* margin: 0 auto; */
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#dayContainer{
+    
+}
+
+.dayName{
+    font-size: 35px;
+}
+
+.dayHigh{
+    font-size: 40px;
+    font-weight:700;
+}
+
+.dayLow{
+    font-size: 20px;
+}
+
+.dayIcon{
+
 }
