@@ -38,12 +38,8 @@ const loadWeatherData = (weatherObj, units) =>{
     // convert timestamp to day solution: https://stackoverflow.com/a/56070916
     const allDays= ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     weatherObj.daily.forEach((day,index)=>{
-        console.log(day);
-        console.log(index);
-        console.log(day.dt);
         let dateTime = new Date(day.dt*1000); //get dateTime
         let convDayName = allDays[dateTime.getDay()];
-        console.log(convDayName);
 
         const dayName = document.querySelector(`#day${index}Name`);
         const dayHigh = document.querySelector(`#day${index}High`);

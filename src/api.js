@@ -2,13 +2,11 @@ const currentWeatherAPI = async (url) => {
     try{
         const response = await fetch(url, {mode: 'cors'});
         const currentData = await response.json();
-        console.log(currentData);
         const currentDataObj = {};
         currentDataObj.city = currentData.name;
         currentDataObj.country = currentData.sys.country;
         currentDataObj.lat = currentData.coord.lat;
         currentDataObj.lon = currentData.coord.lon;
-        console.log('currentDataObj');
         return currentDataObj;
     } catch (error){
         console.log('error: '+error);
@@ -20,7 +18,6 @@ const oneCallAPI = async (url) =>{
     try{
         const response = await fetch(url, {mode: 'cors'});
         const oneCallData = await response.json();
-        console.log(oneCallData);
         const oneCallDataObj = {};
         oneCallDataObj.temp = oneCallData.current.temp;
         oneCallDataObj.description = oneCallData.current.weather[0].description;
