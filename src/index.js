@@ -22,6 +22,7 @@ const siteController = (()=>{
             loadWeatherData(oneCallData, units);
         } catch (error){
             console.log('error: '+error);
+            // add error message under search bar
         }
         
     }
@@ -37,11 +38,13 @@ const siteController = (()=>{
     searchBtn.addEventListener('click', ()=>{
         console.log(searchInput.value);
         getData(searchInput.value);
+        searchInput.value='';
     });
 
     searchInput.addEventListener('keypress', function (e){
         if (e.key ==='Enter'){
             getData(searchInput.value);
+            searchInput.value='';
         }
     });
 
