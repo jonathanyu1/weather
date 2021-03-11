@@ -22,6 +22,9 @@
         </button>
       </div>
     </div>
+    <div id='errorContainer'>
+      <div id='errorInput'>Location not found.</div>
+    </div>
     <div id='currWeatherContainer'>
       <div class='weatherLeftSide'>
         <div id='weatherLocation'></div>   
@@ -32,18 +35,24 @@
       <div class='weatherRightSide'>
         <div class='weatherRightInfoContainer'>
           <span class='material-icons'>thermostat</span>
-          <div class='weatherLabel'>Feels Like</div>
-          <div id='feelsLikeTemp'></div>
+          <div class='labelContainer'>
+            <div class='weatherLabel'>Feels Like</div>
+            <div id='feelsLikeTemp'></div>
+          </div>
         </div>
         <div class='weatherRightInfoContainer'>
           <span class='material-icons'>opacity</span>
-          <div class='weatherLabel'>Humidity</div>
-          <div id='humidityTemp'></div>
+          <div class='labelContainer'>
+            <div class='weatherLabel'>Humidity</div>
+            <div id='humidityTemp'></div>
+          </div>
         </div>
         <div class='weatherRightInfoContainer'>
           <span class='material-icons'>air</span>
-          <div class='weatherLabel'>Wind Speed</div>
-          <div id='windSpeedTemp'></div>
+          <div class='labelContainer'>
+            <div class='weatherLabel'>Wind Speed</div>
+            <div id='windSpeedTemp'></div>
+          </div>
         </div>
       </div>
     </div>
