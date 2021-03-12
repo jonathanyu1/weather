@@ -21,7 +21,6 @@ const loadWeatherData = (weatherObj, units) =>{
     const weatherIcon = document.querySelector('#weatherIcon');
     
     weatherLocation.innerHTML = `${weatherObj.city}, ${weatherObj.country}`;
-    // weatherDescription.innerHTML = `${weatherObj.description}`;
     weatherDescription.innerHTML = `${capitalizeStr(weatherObj.description)}`;
     weatherTemp.innerHTML = `${Math.round(weatherObj.temp)} ${degrees}`;
     weatherIcon.src = `http://openweathermap.org/img/wn/${weatherObj.iconCode}@4x.png`;
@@ -32,8 +31,13 @@ const loadWeatherData = (weatherObj, units) =>{
     const windSpeedTemp = document.querySelector('#windSpeedTemp');
     feelsLikeTemp.innerHTML = `${Math.round(weatherObj.feelsLike)} ${degrees}`;
     humidityTemp.innerHTML = `${weatherObj.humidity}%`;
-    windSpeedTemp.innerHTML = `${Math.round(weatherObj.windSpeed * 10) / 10} ${speed}`;
-
+    // windSpeedTemp.innerHTML = `${Math.round(weatherObj.windSpeed * 10) / 10} ${speed}`;
+    if (degrees=='°C'){
+        // unit is in m/s, need to multiply by 3.6 to get km/h
+        windSpeedTemp.innerHTML=`${Math.round(weatherObj.windSpeed*3.6* 10) / 10} ${speed}`;
+    } else if (degrees=='°F'){
+        windSpeedTemp.innerHTML = `${Math.round(weatherObj.windSpeed * 10) / 10} ${speed}`;
+    }
     // daily weather:
     // convert timestamp to day solution: https://stackoverflow.com/a/56070916
     const allDays= ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
